@@ -18,6 +18,47 @@
 
 ---
 
+## Getting started
+
+Follow these steps to clone the repository and run the application locally or with Docker. The quick start below highlights the most common flows.
+
+```powershell
+# clone the repo
+git clone <your-ssh-or-https-url> huenets
+cd huenets
+```
+
+Quick local run (Node + npm):
+
+```powershell
+# backend
+cd backend
+npm ci
+npm run dev
+
+# in a new terminal: frontend
+cd ../frontend
+npm ci
+npm run dev
+```
+
+Quick Docker (development config with live reload):
+
+```powershell
+# from repository root
+docker compose -f docker-compose.dev.yml up --build
+```
+
+Quick Docker (production-like):
+
+```powershell
+# from repository root
+docker compose up --build -d
+# check logs
+docker compose logs -f
+```
+
+
 ## Backend API
 
 Base URL (default for local development): `http://localhost:4000`
@@ -101,6 +142,48 @@ Open the app at `http://localhost:3000`.
 
 Notes
 - The frontend expects the API on `http://localhost:4000` by default. If you run the backend on a different host/port, update `frontend/.env.local` or set `NEXT_PUBLIC_API_BASE` accordingly.
+
+---
+
+## Clone & quick start
+
+Clone the repository and run the app locally or with Docker. Replace `<your-ssh-or-https-url>` with your repository URL if you forked or moved this repo.
+
+```powershell
+# clone the repo
+git clone <your-ssh-or-https-url> huenets
+cd huenets
+```
+
+Quick local run (Node + npm):
+
+```powershell
+# backend
+cd backend
+npm ci
+npm run dev
+
+# in a new terminal: frontend
+cd ../frontend
+npm ci
+npm run dev
+```
+
+Quick Docker (development config with live reload):
+
+```powershell
+# from repository root
+docker compose -f docker-compose.dev.yml up --build
+```
+
+Quick Docker (production-like):
+
+```powershell
+# from repository root
+docker compose up --build -d
+# check logs
+docker compose logs -f
+```
 
 ---
 
