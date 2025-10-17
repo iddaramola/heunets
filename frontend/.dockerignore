@@ -1,0 +1,23 @@
+# Dependencies
+node_modules
+npm-debug.log
+
+# Next.js build artifacts
+.next
+out
+
+# Local environment
+.env
+.env.local
+.env.*.local
+
+# Git and CI
+.git
+.gitignore
+.github
+
+# OS / Editor junk
+.DS_Store
+.vscode
+.idea
+*.swp

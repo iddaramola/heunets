@@ -6,9 +6,12 @@ services:
       - "4000:4000"
     env_file:
       - ./backend/.env
-    command: npm start           
+    volumes:
+      - ./backend:/app          
+      - /app/node_modules       
+    command: npm run dev         
     environment:
-      - NODE_ENV=production
+      - NODE_ENV=development
 
   frontend:
     build:
@@ -16,7 +19,11 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - NODE_ENV=production
+      - NODE_ENV=development
       - NEXT_PUBLIC_API_BASE=http://backend:4000
+    volumes:
+      - ./frontend:/app         
+      - /app/node_modules        
+    command: npm run dev          
     depends_on:
       - backend

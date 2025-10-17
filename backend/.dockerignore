@@ -1,0 +1,22 @@
+node_modules
+npm-debug.log
+
+# Build artifacts
+dist
+coverage
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Git and CI
+.git
+.gitignore
+.github
+
+# OS / Editor junk
+.DS_Store
+.vscode
+.idea
+*.swp

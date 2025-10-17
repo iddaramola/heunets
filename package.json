@@ -1,0 +1,16 @@
+{
+  "name": "work-item-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-stack work item tracker prototype using Next.js + Fastify",
+  "scripts": {
+    "dev": "docker compose -f docker-compose.dev.yml up --build",
+    "prod": "docker compose up --build -d",
+    "down": "docker compose down",
+    "logs": "docker compose logs -f",
+    "clean": "docker system prune -af --volumes"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
