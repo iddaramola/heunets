@@ -2,6 +2,7 @@ services:
   backend:
     build:
       context: ./backend
+      dockerfile: Dockerfile
     container_name: huenets-backend
     ports:
       - "4000:4000"
@@ -12,6 +13,7 @@ services:
   frontend:
     build:
       context: ./frontend
+      dockerfile: Dockerfile
     container_name: huenets-frontend
     ports:
       - "3000:3000"
